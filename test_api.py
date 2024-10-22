@@ -40,9 +40,9 @@ class TestGitHubAPI(unittest.TestCase):
         response = requests.delete(self.api_url, headers=HEADERS)
         self.assertEqual(response.status_code, 204, 'Не удалось удалить репозиторий')
 
-    def tearDown(self):
-        # Удаляем репозиторий, если он существует
-        requests.delete(self.api_url, headers=HEADERS)
+    # def tearDown(self):
+    #     # Удаляем репозиторий, если он существует
+    #     requests.delete(self.api_url, headers=HEADERS)
 
 if __name__ == '__main__':
     unittest.main()
